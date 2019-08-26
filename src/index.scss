@@ -1,0 +1,8 @@
+@import 'common.scss';
+.color{
+    color:$red;
+    @include ellipsis;
+    .color{
+        color:blue
+    }
+}
