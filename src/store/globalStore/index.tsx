@@ -1,19 +1,20 @@
 import { observable, action } from 'mobx'
 
-class GlobalStore {
+export class GlobalStore{
     @observable
-    num: number=0
+    num : number = 1
 
     @action
     increase = (num:number)=>{
-        this.num +=num
+        console.log('增加',num)
+        this.num += num
     }
+
     @action
     decrease = (num:number)=>{
-        this.num -=num
+        this.num -= num
     }
 }
 
+
 export default new GlobalStore()
-
-
