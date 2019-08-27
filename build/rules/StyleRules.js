@@ -1,4 +1,5 @@
 const untils = require('./../untils')
+const theme = require('./../../theme')
 module.exports = [
     {
         test:/\.scss$/,
@@ -26,6 +27,22 @@ module.exports = [
                 loader:'sass-loader',
                 options:{
                     includePaths:[untils('src/styles')]
+                }
+            },
+            
+        ]
+    },
+    {
+        test:/\.less$/,
+        include:[untils('node_modules')],
+        use:[
+            'style-loader',
+            'css-loader',
+            {
+                loader:'less-loader',
+                options:{
+                    javascriptEnabled:true,
+                    modifyVars:theme
                 }
             },
             
