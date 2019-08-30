@@ -5,3 +5,7 @@ export class ComponentExt< P={},S={} > extends React.Component<P,S>{
     $message = message
     $notification = notification
 }
+export class StoreExt {
+    readonly $message = message
+    readonly $notification = notification
+}

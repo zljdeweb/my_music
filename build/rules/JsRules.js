@@ -1,5 +1,5 @@
 const tsImportPluginFactory = require('ts-import-plugin')
-const untils = require('./../untils')
+const {untils} = require('./../untils')
 module.exports = [
     {
         test:/\.ts(x?)$/,

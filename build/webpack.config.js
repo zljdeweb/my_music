@@ -1,4 +1,4 @@
-const untils = require('./untils')
+const {untils} = require('./untils')
 const plugins = require('./plugins')
 const Jsrules = require('./rules/JsRules')
 const Stylerules = require('./rules/StyleRules')
@@ -10,7 +10,7 @@ module.exports = {
     },
     output:{
         path:untils('dist'),
-        filename:'[name].js'
+        filename:'js/[name].js'
     },
     resolve: {
         extensions:['.ts','.tsx','.js','.jsx'],

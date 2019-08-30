@@ -1,11 +1,13 @@
-const untils = require('./../untils')
+const {untils} = require('./../untils')
 const theme = require('./../../theme')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = [
     {
         test:/\.scss$/,
         include:[untils('src')],
         use:[
-            'style-loader',
+            // 'style-loader',
+            MiniCssExtractPlugin.loader,
             // {
             //     loader:'cache-loader',
             //     options:{
@@ -36,7 +38,8 @@ module.exports = [
         test:/\.less$/,
         include:[untils('node_modules')],
         use:[
-            'style-loader',
+            // 'style-loader',
+            MiniCssExtractPlugin.loader,
             'css-loader',
             {
                 loader:'less-loader',
